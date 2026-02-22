@@ -1,0 +1,313 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Custom base styles */
+  body {
+    @apply antialiased;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl lg:text-2xl;
+  }
+
+  h6 {
+    @apply text-base md:text-lg lg:text-xl;
+  }
+}
+
+@layer components {
+  /* Custom component classes */
+  .btn-primary {
+    @apply bg-cosmic-primary text-white px-6 py-3 rounded-lg font-semibold 
+           hover:bg-cosmic-primary/80 transition-all transform hover:scale-105 
+           focus:outline-none focus:ring-2 focus:ring-cosmic-accent focus:ring-offset-2 
+           focus:ring-offset-cosmic-dark disabled:opacity-50 disabled:cursor-not-allowed
+           disabled:hover:scale-100;
+  }
+
+  .btn-secondary {
+    @apply bg-cosmic-secondary text-white px-6 py-3 rounded-lg font-semibold 
+           hover:bg-cosmic-secondary/80 transition-all transform hover:scale-105
+           focus:outline-none focus:ring-2 focus:ring-cosmic-accent focus:ring-offset-2 
+           focus:ring-offset-cosmic-dark disabled:opacity-50 disabled:cursor-not-allowed
+           disabled:hover:scale-100;
+  }
+
+  .btn-accent {
+    @apply bg-cosmic-accent text-white px-6 py-3 rounded-lg font-semibold 
+           hover:bg-cosmic-accent/80 transition-all transform hover:scale-105
+           focus:outline-none focus:ring-2 focus:ring-cosmic-accent focus:ring-offset-2 
+           focus:ring-offset-cosmic-dark disabled:opacity-50 disabled:cursor-not-allowed
+           disabled:hover:scale-100;
+  }
+
+  .btn-outline {
+    @apply border-2 border-cosmic-primary text-cosmic-primary px-6 py-3 rounded-lg 
+           font-semibold hover:bg-cosmic-primary/10 transition-all transform hover:scale-105
+           focus:outline-none focus:ring-2 focus:ring-cosmic-accent focus:ring-offset-2 
+           focus:ring-offset-cosmic-dark disabled:opacity-50 disabled:cursor-not-allowed
+           disabled:hover:scale-100;
+  }
+
+  .btn-ghost {
+    @apply text-gray-400 px-6 py-3 rounded-lg font-semibold 
+           hover:text-white hover:bg-cosmic-primary/20 transition-all
+           focus:outline-none focus:ring-2 focus:ring-cosmic-accent focus:ring-offset-2 
+           focus:ring-offset-cosmic-dark disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-cosmic-light border border-cosmic-primary/30 
+           rounded-lg focus:outline-none focus:border-cosmic-accent 
+           focus:ring-1 focus:ring-cosmic-accent text-white placeholder-gray-500
+           transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .card {
+    @apply bg-cosmic-light/80 backdrop-blur-sm border border-cosmic-primary/30 
+           rounded-xl shadow-xl overflow-hidden transition-all duration-300
+           hover:border-cosmic-accent hover:shadow-2xl;
+  }
+
+  .badge {
+    @apply px-3 py-1 rounded-full text-sm font-medium inline-flex items-center;
+  }
+
+  .badge-primary {
+    @apply badge bg-cosmic-primary/20 text-cosmic-primary border border-cosmic-primary;
+  }
+
+  .badge-accent {
+    @apply badge bg-cosmic-accent/20 text-cosmic-accent border border-cosmic-accent;
+  }
+
+  .badge-success {
+    @apply badge bg-green-500/20 text-green-400 border border-green-500;
+  }
+
+  .badge-warning {
+    @apply badge bg-yellow-500/20 text-yellow-400 border border-yellow-500;
+  }
+
+  .badge-error {
+    @apply badge bg-red-500/20 text-red-400 border border-red-500;
+  }
+
+  .badge-info {
+    @apply badge bg-blue-500/20 text-blue-400 border border-blue-500;
+  }
+
+  .section-title {
+    @apply text-3xl font-orbitron font-bold mb-8 
+           bg-gradient-to-r from-cosmic-primary to-cosmic-accent 
+           bg-clip-text text-transparent;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  /* Custom utility classes */
+  .text-glow {
+    text-shadow: 0 0 10px theme('colors.cosmic.accent'),
+                 0 0 20px theme('colors.cosmic.accent'),
+                 0 0 30px theme('colors.cosmic.accent');
+  }
+
+  .text-glow-primary {
+    text-shadow: 0 0 10px theme('colors.cosmic.primary'),
+                 0 0 20px theme('colors.cosmic.primary'),
+                 0 0 30px theme('colors.cosmic.primary');
+  }
+
+  .box-glow {
+    box-shadow: 0 0 10px theme('colors.cosmic.primary'),
+                0 0 20px theme('colors.cosmic.primary');
+  }
+
+  .box-glow-accent {
+    box-shadow: 0 0 10px theme('colors.cosmic.accent'),
+                0 0 20px theme('colors.cosmic.accent');
+  }
+
+  .bg-cosmic-gradient {
+    background: linear-gradient(135deg, 
+      theme('colors.cosmic.primary') 0%, 
+      theme('colors.cosmic.accent') 100%);
+  }
+
+  .bg-cosmic-gradient-soft {
+    background: linear-gradient(135deg, 
+      theme('colors.cosmic.primary/20') 0%, 
+      theme('colors.cosmic.accent/20') 100%);
+  }
+
+  .border-glow {
+    border: 1px solid transparent;
+    background: linear-gradient(theme('colors.cosmic.dark'), theme('colors.cosmic.dark')) padding-box,
+                linear-gradient(135deg, 
+                  theme('colors.cosmic.primary'), 
+                  theme('colors.cosmic.accent')) border-box;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Responsive utilities */
+  .responsive-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .flex-start {
+    @apply flex items-center justify-start;
+  }
+
+  .flex-end {
+    @apply flex items-center justify-end;
+  }
+
+  /* Spacing utilities */
+  .section-spacing {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .section-spacing-top {
+    @apply pt-12 md:pt-16 lg:pt-20;
+  }
+
+  .section-spacing-bottom {
+    @apply pb-12 md:pb-16 lg:pb-20;
+  }
+
+  /* Z-index utilities */
+  .z-header {
+    z-index: 50;
+  }
+
+  .z-modal {
+    z-index: 100;
+  }
+
+  .z-tooltip {
+    z-index: 150;
+  }
+
+  .z-toast {
+    z-index: 200;
+  }
+
+  /* Animation utilities */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animation-delay-1000 {
+    animation-delay: 1000ms;
+  }
+}
+
+/* Custom scrollbar utilities */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-cosmic-light/30 rounded;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-cosmic-primary/50 rounded hover:bg-cosmic-primary transition-colors;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Print utilities */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+}
+
+/* Accessibility utilities */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse,
+  .animate-bounce,
+  .animate-spin,
+  .animate-ping,
+  .motion-safe\:animate-pulse,
+  .motion-safe\:animate-bounce,
+  .motion-safe\:animate-spin,
+  .motion-safe\:animate-ping {
+    animation: none !important;
+  }
+}
+
+/* RTL support */
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}

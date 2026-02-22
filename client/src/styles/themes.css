@@ -1,0 +1,238 @@
+/* Dark Theme (Default) */
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #1a1a2e;
+  --bg-tertiary: #2a2a3e;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --text-tertiary: #6b7280;
+  --border-color: rgba(107, 33, 165, 0.3);
+  --card-bg: rgba(26, 26, 46, 0.8);
+  --hover-bg: rgba(107, 33, 165, 0.2);
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Light Theme */
+.theme-light {
+  --bg-primary: #f3f4f6;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e5e7eb;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-tertiary: #6b7280;
+  --border-color: rgba(107, 33, 165, 0.2);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --hover-bg: rgba(107, 33, 165, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.theme-light body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.theme-light .cosmic-card {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.theme-light input,
+.theme-light textarea,
+.theme-light select {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Cosmic Theme (Default with enhanced effects) */
+.theme-cosmic {
+  --cosmic-glow: 0 0 20px rgba(107, 33, 165, 0.5);
+  --cosmic-glow-accent: 0 0 20px rgba(245, 158, 11, 0.5);
+  --nebula-overlay: radial-gradient(circle at 20% 30%, 
+                    rgba(107, 33, 165, 0.15) 0%, 
+                    transparent 50%);
+}
+
+.theme-cosmic body {
+  background-image: var(--nebula-overlay);
+}
+
+/* Aurora Theme */
+.theme-aurora {
+  --bg-primary: #0a1a2f;
+  --bg-secondary: #1a2a3f;
+  --bg-tertiary: #2a3a4f;
+  --text-primary: #ffffff;
+  --text-secondary: #a0c0e0;
+  --text-tertiary: #708090;
+  --border-color: rgba(100, 200, 255, 0.3);
+  --card-bg: rgba(20, 40, 60, 0.8);
+  --hover-bg: rgba(100, 200, 255, 0.2);
+  --cosmic-primary: #4a90e2;
+  --cosmic-secondary: #2a6f97;
+  --cosmic-accent: #7fb3d5;
+}
+
+.theme-aurora body {
+  background: linear-gradient(135deg, #0a1a2f 0%, #1a2a3f 50%, #0a1a2f 100%);
+}
+
+/* Nebula Theme */
+.theme-nebula {
+  --bg-primary: #1a0f2a;
+  --bg-secondary: #2a1f3a;
+  --bg-tertiary: #3a2f4a;
+  --text-primary: #ffffff;
+  --text-secondary: #d4b8ff;
+  --text-tertiary: #9f8ab9;
+  --border-color: rgba(180, 130, 255, 0.3);
+  --card-bg: rgba(40, 20, 60, 0.8);
+  --hover-bg: rgba(180, 130, 255, 0.2);
+  --cosmic-primary: #b882ff;
+  --cosmic-secondary: #8a4fff;
+  --cosmic-accent: #ffb3b3;
+}
+
+.theme-nebula body {
+  background: radial-gradient(ellipse at top, #2a1f3a 0%, #1a0f2a 100%);
+}
+
+/* Midnight Theme */
+.theme-midnight {
+  --bg-primary: #0a0f1f;
+  --bg-secondary: #1a1f2f;
+  --bg-tertiary: #2a2f3f;
+  --text-primary: #ffffff;
+  --text-secondary: #b0c4de;
+  --text-tertiary: #708090;
+  --border-color: rgba(255, 215, 0, 0.2);
+  --card-bg: rgba(10, 15, 30, 0.9);
+  --hover-bg: rgba(255, 215, 0, 0.1);
+  --cosmic-primary: #4169e1;
+  --cosmic-secondary: #1e3a8a;
+  --cosmic-accent: #ffd700;
+}
+
+.theme-midnight body {
+  background: linear-gradient(180deg, #0a0f1f 0%, #1a1f2f 100%);
+}
+
+/* Sunset Theme */
+.theme-sunset {
+  --bg-primary: #2d1b2d;
+  --bg-secondary: #3d2b3d;
+  --bg-tertiary: #4d3b4d;
+  --text-primary: #ffffff;
+  --text-secondary: #ffcba4;
+  --text-tertiary: #c08f7a;
+  --border-color: rgba(255, 140, 100, 0.3);
+  --card-bg: rgba(60, 30, 40, 0.8);
+  --hover-bg: rgba(255, 140, 100, 0.2);
+  --cosmic-primary: #ff6b6b;
+  --cosmic-secondary: #c06b6b;
+  --cosmic-accent: #ffa07a;
+}
+
+.theme-sunset body {
+  background: linear-gradient(135deg, #2d1b2d 0%, #4d2b3d 50%, #2d1b2d 100%);
+}
+
+/* Galaxy Theme */
+.theme-galaxy {
+  --bg-primary: #0f0f1f;
+  --bg-secondary: #1f1f2f;
+  --bg-tertiary: #2f2f3f;
+  --text-primary: #ffffff;
+  --text-secondary: #c0c0ff;
+  --text-tertiary: #8080a0;
+  --border-color: rgba(150, 100, 255, 0.4);
+  --card-bg: rgba(20, 20, 40, 0.8);
+  --hover-bg: rgba(150, 100, 255, 0.2);
+  --cosmic-primary: #9f7aea;
+  --cosmic-secondary: #6b46c1;
+  --cosmic-accent: #fbb6ce;
+}
+
+.theme-galaxy body {
+  background: radial-gradient(ellipse at 20% 30%, #2f2f4f 0%, #0f0f1f 100%);
+}
+
+/* Theme Transitions */
+.theme-transition {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.theme-transition * {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* Theme-specific component styles */
+.theme-light .glow-button {
+  box-shadow: 0 2px 4px rgba(107, 33, 165, 0.3);
+}
+
+.theme-light .glow-button:hover {
+  box-shadow: 0 4px 8px rgba(245, 158, 11, 0.4);
+}
+
+.theme-aurora .cosmic-card {
+  border-image: linear-gradient(135deg, #4a90e2, #7fb3d5) 1;
+}
+
+.theme-nebula .cosmic-card {
+  border-image: linear-gradient(135deg, #b882ff, #ffb3b3) 1;
+}
+
+.theme-midnight .cosmic-card {
+  border-image: linear-gradient(135deg, #4169e1, #ffd700) 1;
+}
+
+.theme-sunset .cosmic-card {
+  border-image: linear-gradient(135deg, #ff6b6b, #ffa07a) 1;
+}
+
+.theme-galaxy .cosmic-card {
+  border-image: linear-gradient(135deg, #9f7aea, #fbb6ce) 1;
+}
+
+/* High contrast theme adjustments */
+@media (prefers-contrast: high) {
+  .theme-light {
+    --border-color: #6b21a5;
+    --text-primary: #000000;
+    --text-secondary: #1f2937;
+  }
+  
+  .theme-dark {
+    --border-color: #f59e0b;
+    --text-primary: #ffffff;
+    --text-secondary: #e5e7eb;
+  }
+}
+
+/* Dark mode media query */
+@media (prefers-color-scheme: dark) {
+  :root:not(.theme-light):not(.theme-aurora):not(.theme-nebula):not(.theme-midnight):not(.theme-sunset):not(.theme-galaxy) {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #1a1a2e;
+    --text-primary: #ffffff;
+    --text-secondary: #9ca3af;
+  }
+}
+
+/* Light mode media query */
+@media (prefers-color-scheme: light) {
+  :root:not(.theme-dark):not(.theme-aurora):not(.theme-nebula):not(.theme-midnight):not(.theme-sunset):not(.theme-galaxy) {
+    --bg-primary: #f3f4f6;
+    --bg-secondary: #ffffff;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+  }
+}
